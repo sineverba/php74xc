@@ -1,7 +1,11 @@
 php74xc: Docker image for PHP7.4 + Xdebug + Composer
 ====================================================
 
-Docker image built from **PHP7.4** CLI official + **X**debug + **C**omposer
+Docker image built from **PHP7.4** CLI official + **X**debug + **C**omposer.
+
+Image ready to use as alias for development.
+
+Do you use it? **Star it!**
 
 ## Add image as alias
 
@@ -9,12 +13,12 @@ Docker image built from **PHP7.4** CLI official + **X**debug + **C**omposer
 
 $ cd ~
 $ nano .bashrc
-$ alias php74='docker run -it -w /data -v ${PWD}:/data --entrypoint php --rm php74xc:1.0.0'
-$ alias composer74='docker run -it -w /data -v ${PWD}:/data --entrypoint "/usr/bin/composer" --rm php74xc:1.0.0'
+$ alias php74='docker run -it -w /data -v ${PWD}:/data --entrypoint php --rm sineverba/php74xc:latest'
+$ alias composer74='docker run -it -w /data -v ${PWD}:/data --entrypoint "/usr/bin/composer" --rm sineverba/php74xc:latest'
 
 ```
 
-### Build and test image
+### Build and test image locally
 
 + Check images list
 
@@ -26,8 +30,8 @@ $ alias composer74='docker run -it -w /data -v ${PWD}:/data --entrypoint "/usr/b
 
 + Run from same folder
 
-`$ docker build --tag php74xc:1.0.0 .`
+`$ docker build --tag php74xc:x.y.z .`
 
-+ Check new image (php74xc:1.0.0)
++ Check new image (php74xc:x.y.z)
 
 `$ docker image ls`
