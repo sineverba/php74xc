@@ -1,4 +1,7 @@
-# 1.0.1
+# Next version
++ Add `.dockerignore`
+
+## 1.0.1
 + Fix documentation
 
 ## 1.0.0
