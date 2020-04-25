@@ -1,5 +1,6 @@
-# Next version
+# 1.1.1
 + Add `.dockerignore`
++ Add Travic CI
 
 ## 1.0.1
 + Fix documentation
