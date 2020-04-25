@@ -12,8 +12,6 @@ script:
   - docker run --rm test/php74xc php -v | grep 7.4
   - docker run --rm test/php74xc php -m | grep xdebug
   - docker run --rm test/php74xc /usr/bin/composer -V | grep Composer
-  # fail test
-  - docker run --rm test/php74xc php -m | grep failing_test
 
 after_script:
   - docker rmi test/php74xc
@@ -27,3 +25,5 @@ after_failure:
 deploy:
   provider: script
   script: echo "Deploy"
+  #on:
+  #  tags: true
