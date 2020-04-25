@@ -18,14 +18,10 @@ script:
   - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep Composer
 
 after_success:
-  #- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - echo "Success, we can deploy"
-  - docker push $DOCKER_USERNAME/$DOCKER_IMAGE
-  - docker rmi $DOCKER_USERNAME/$DOCKER_IMAGE
+  - chmod +x ./deploy.sh
 
 deploy:
   provider: script
-  script: docker push $DOCKER_USERNAME/$DOCKER_IMAGE
+  script: ./deploy.sh
   on:
     tags: true
