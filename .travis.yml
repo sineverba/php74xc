@@ -1,0 +1,25 @@
+os: linux
+dist: bionic
+language: shell
+
+services:
+  - docker
+
+env:
+  DOCKER_USERNAME: sineverba
+  DOCKER_IMAGE: php74xc
+
+install:
+  - docker build --tag $DOCKER_USERNAME/$DOCKER_IMAGE .
+
+script:
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep 7.4
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep xdebug
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep Composer
+
+before_deploy: chmod +x ./deploy.sh
+deploy:
+  provider: script
+  script: ./deploy.sh
+  on:
+    tags: true
