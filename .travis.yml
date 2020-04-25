@@ -17,9 +17,10 @@ script:
   - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep xdebug
   - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep Composer
 
-before_deploy: chmod +x ./deploy.sh
-deploy:
-  provider: script
-  script: ./deploy.sh
-  on:
-    tags: true
+after_success:
+  - |
+    if [[ $TRAVIS_TAG != "" ]]; then
+      echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      docker push $DOCKER_USERNAME/$DOCKER_IMAGE
+      docker rmi $DOCKER_USERNAME/$DOCKER_IMAGE
+    fi

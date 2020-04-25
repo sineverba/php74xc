@@ -1,6 +1,8 @@
 php74xc: Docker image for PHP7.4 + Xdebug + Composer
 ====================================================
 
+[![Build Status](https://travis-ci.com/sineverba/php74xc.svg?branch=master)](https://travis-ci.com/sineverba/php74xc)
+
 Docker image built from **PHP7.4** CLI official + **X**debug + **C**omposer.
 
 Image ready to use as alias for development.
