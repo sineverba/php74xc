@@ -1,6 +1,6 @@
 os: linux
 dist: bionic
-language: minimal
+language: shell
 
 services:
   - docker
@@ -12,6 +12,14 @@ script:
   - docker run --rm test/php74xc php -v | grep 7.4
   - docker run --rm test/php74xc php -m | grep xdebug
   - docker run --rm test/php74xc /usr/bin/composer -V | grep Composer
+  # fail test
+  - docker run --rm test/php74xc php -m | grep failing_test
+
+after_script:
+  - docker rmi test/php74xc
 
 after_success:
-  - docker rmi test/php74xc
+  - echo "Success, we can deploy"
+
+after_failure:
+  - echo "Fail, we cannot deploy"
