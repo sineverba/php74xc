@@ -17,9 +17,7 @@ script:
   - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep xdebug
   - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep Composer
 
-after_success:
-  - chmod +x ./deploy.sh
-
+before_deploy: chmod +x ./deploy.sh
 deploy:
   provider: script
   script: ./deploy.sh
