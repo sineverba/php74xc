@@ -23,3 +23,7 @@ after_success:
 
 after_failure:
   - echo "Fail, we cannot deploy"
+
+deploy:
+  provider: script
+  script: echo "Deploy"
