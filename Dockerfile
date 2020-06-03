@@ -1,4 +1,4 @@
-FROM php:7.4-cli
+FROM php:7.4.6-cli
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -25,6 +25,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Add custom ini files
 COPY config/10-shorttag.ini $PHP_INI_DIR/conf.d/
+COPY config/20-memory-limit.ini $PHP_INI_DIR/conf.d/
 
 # Create folder
 RUN mkdir -p /data

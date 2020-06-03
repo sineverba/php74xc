@@ -13,10 +13,11 @@ install:
   - docker build --tag $DOCKER_USERNAME/$DOCKER_IMAGE .
 
 script:
-  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep 7.4
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep 7.4.6
   - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep xdebug
   - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep Composer
   - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -i | grep "short_open_tag => Off => Off"
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -i | grep "memory_limit => 256M => 256M"
 
 after_success:
   - |

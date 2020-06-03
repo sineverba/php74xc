@@ -1,5 +1,5 @@
-php74xc: Docker image for PHP7.4 + Xdebug + Composer
-====================================================
+php74xc: Docker image for PHP7.4.X + Xdebug + Composer
+======================================================
 
 | CD / CI   |           |
 | --------- | --------- |
@@ -27,6 +27,12 @@ $ alias composer74='docker run -it -w /data -v ${PWD}:/data --entrypoint "/usr/b
 ```
 
 ### Build and test image locally
+
+```shell
+$ make build
+$ make test
+$ make destroy
+```
 
 + Check images list
 
