@@ -1,4 +1,9 @@
-# 1.2.0
+# Next version
++ Move to PHP7.4.6
++ Increase `memory_limit` to 256MB
++ Add `Makefile`
+
+## 1.2.0
 + Set short tag = off
 
 ## 1.1.1
