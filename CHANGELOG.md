@@ -1,4 +1,4 @@
-# Next version
+# 1.3.0
 + Move to PHP7.4.6
 + Increase `memory_limit` to 256MB
 + Add `Makefile`

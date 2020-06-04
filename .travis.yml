@@ -11,6 +11,7 @@ env:
 
 before_install:
   - chmod +x ./.deploy/scripts/test.sh
+  - chmod +x ./.deploy/scripts/deploy.sh
 
 install:
   - docker build --tag $DOCKER_USERNAME/$DOCKER_IMAGE .
@@ -21,7 +22,5 @@ script:
 after_success:
   - |
     if [[ $TRAVIS_TAG != "" ]]; then
-      echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
-      docker push $DOCKER_USERNAME/$DOCKER_IMAGE
-      docker rmi $DOCKER_USERNAME/$DOCKER_IMAGE
+      ./.deploy/scripts/deploy.sh
     fi
