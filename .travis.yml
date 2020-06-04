@@ -9,19 +9,18 @@ env:
   DOCKER_USERNAME: sineverba
   DOCKER_IMAGE: php74xc
 
+before_install:
+  - chmod +x ./.deploy/scripts/test.sh
+  - chmod +x ./.deploy/scripts/deploy.sh
+
 install:
   - docker build --tag $DOCKER_USERNAME/$DOCKER_IMAGE .
 
 script:
-  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep 7.4
-  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep xdebug
-  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep Composer
-  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -i | grep "short_open_tag => Off => Off"
+  - ./.deploy/scripts/test.sh
 
 after_success:
   - |
     if [[ $TRAVIS_TAG != "" ]]; then
-      echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
-      docker push $DOCKER_USERNAME/$DOCKER_IMAGE
-      docker rmi $DOCKER_USERNAME/$DOCKER_IMAGE
+      ./.deploy/scripts/deploy.sh
     fi
