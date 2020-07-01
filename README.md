@@ -1,4 +1,4 @@
-php74xc: Docker image for PHP7.4.X + Xdebug + Composer
+php74xc: Docker image for PHP7.4.x + Xdebug + Composer
 ======================================================
 
 | CD / CI   |           |
@@ -7,7 +7,7 @@ php74xc: Docker image for PHP7.4.X + Xdebug + Composer
 
 
 
-Docker image built from **PHP7.4** CLI official + **X**debug + **C**omposer.
+Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer.
 
 Short tags are __OFF__.
 
