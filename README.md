@@ -19,7 +19,7 @@ Do you use it? **Star it!**
 
 | Component | Version |
 | --------- | ------- |
-| PHP | 7.4.7 |
+| PHP | 7.4.9 |
 | Composer | 1.10.10 |
 
 ## PHP modules

@@ -2,7 +2,7 @@ build:
 		docker build --tag sineverba/testphp74xc .
 
 test:
-		@docker run --rm sineverba/testphp74xc php -v | grep 7.4.7
+		@docker run --rm sineverba/testphp74xc php -v | grep 7.4.9
 		@docker run --rm sineverba/testphp74xc php -m | grep xdebug
 		@docker run --rm sineverba/testphp74xc php -m | grep pdo_pgsql
 		@docker run --rm sineverba/testphp74xc /usr/bin/composer -V | grep "1.10.10"
