@@ -1,5 +1,6 @@
 # Next version
 + Add support for Postgres
++ Bump to PHP 7.4.9
 
 ## 1.4.0
 + Move to PHP7.4.7
