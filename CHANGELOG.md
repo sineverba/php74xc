@@ -1,4 +1,4 @@
-# Next version
+# 1.5.0
 + Add support for Postgres
 + Bump to PHP 7.4.9
 
