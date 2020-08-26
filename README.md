@@ -15,6 +15,64 @@ Image ready to use as alias for development.
 
 Do you use it? **Star it!**
 
+## Versions
+
+| Component | Version |
+| --------- | ------- |
+| PHP | 7.4.7 |
+| Composer | 1.10.10 |
+
+## PHP modules
+
+`$ docker run --rm sineverba/php74xc php -m`
+
+| PHP modules |
+| ----------- |
+| bcmath |
+| Core |
+| ctype |
+| curl |
+| date |
+| dom |
+| exif |
+| fileinfo |
+| filter |
+| ftp |
+| gd |
+| hash |
+| iconv |
+| json |
+| libxml |
+| mbstring |
+| mysqli |
+| mysqlnd |
+| openssl |
+| pcntl |
+| pcre |
+| PDO |
+| pdo_mysql |
+| pdo_pgsql |
+| pdo_sqlite |
+| Phar |
+| posix |
+| readline |
+| Reflection |
+| session |
+| SimpleXML |
+| sodium |
+| SPL |
+| sqlite3 |
+| standard |
+| tokenizer |
+| xdebug |
+| xml |
+| xmlreader |
+| xmlreader |
+| xmlwriter 
+| xmlreader |
+| zlib |
+| Xdebug |
+
 ## Add image as alias
 
 ``` bash
