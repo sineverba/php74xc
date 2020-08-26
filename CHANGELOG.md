@@ -1,4 +1,7 @@
-# 1.4.0
+# Next version
++ Add support for Postgres
+
+## 1.4.0
 + Move to PHP7.4.7
 + Increase `memory_limit` to 512MB 
 
