@@ -15,12 +15,27 @@ Image ready to use as alias for development.
 
 Do you use it? **Star it!**
 
+
+
 ## Versions
 
 | Component | Version |
 | --------- | ------- |
 | PHP | 7.4.11 |
 | Composer | 1.10.13 |
+
+
+## Github / image tags vs PHP version
+
+Q: Why release bumped from 1.x to 7.x?
+A: Cause I'm following PHP releases version.
+
+| Github / Image tag | PHP Version | Composer version |
+| ------------------ | ----------- | ---------------- |
+| latest | 7.4.11 | 1.10.13 |
+| 7.4.11 | 7.4.11 | 1.10.13 |
+| 1.5.0 | 7.4.9 | 1.10.10 |
+
 
 ## PHP modules
 
