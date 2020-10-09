@@ -1,4 +1,4 @@
-FROM php:7.4.9-cli
+FROM php:7.4.11-cli
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -23,7 +23,7 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql pdo_pgsql mbstring exif pcntl bc
     && docker-php-ext-enable mysqli pdo pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd
 
 # Get latest Composer
-COPY --from=composer:1.10.10 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.10.13 /usr/bin/composer /usr/bin/composer
 
 # Add custom ini files
 COPY config/10-shorttag.ini $PHP_INI_DIR/conf.d/

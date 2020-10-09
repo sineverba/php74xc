@@ -15,12 +15,27 @@ Image ready to use as alias for development.
 
 Do you use it? **Star it!**
 
+
+
 ## Versions
 
 | Component | Version |
 | --------- | ------- |
-| PHP | 7.4.9 |
-| Composer | 1.10.10 |
+| PHP | 7.4.11 |
+| Composer | 1.10.13 |
+
+
+## Github / image tags vs PHP version
+
+Q: Why release bumped from 1.x to 7.x?
+A: Cause I'm following PHP releases version.
+
+| Github / Image tag | PHP Version | Composer version |
+| ------------------ | ----------- | ---------------- |
+| latest | 7.4.11 | 1.10.13 |
+| 7.4.11 | 7.4.11 | 1.10.13 |
+| 1.5.0 | 7.4.9 | 1.10.10 |
+
 
 ## PHP modules
 
@@ -76,13 +91,15 @@ Do you use it? **Star it!**
 ## Add image as alias
 
 ``` bash
-
 $ cd ~
 $ nano .bashrc
 $ alias php74='docker run -it -w /data -v ${PWD}:/data --entrypoint php --rm sineverba/php74xc:latest'
 $ alias composer74='docker run -it -w /data -v ${PWD}:/data --entrypoint "/usr/bin/composer" --rm sineverba/php74xc:latest'
-
 ```
+
+## Issues with memory limit (on composer)
+
+`$ php -d memory_limit=-1 /usr/bin/composer require [...]`
 
 ### Build and test image locally
 

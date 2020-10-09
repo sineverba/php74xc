@@ -1,4 +1,9 @@
-# 1.5.0
+# 7.4.11
+
++ Bump to Php 7.4.11
++ Bump composer to 1.10.13
+
+## 1.5.0
 + Add support for Postgres
 + Bump to PHP 7.4.9
 
