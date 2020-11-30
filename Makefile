@@ -3,6 +3,7 @@ build:
 
 test:
 		@docker run --rm sineverba/testphp74xc php -v | grep 7.4.12
+		@docker run --rm sineverba/testphp74xc php -v | grep OPcache
 		@docker run --rm sineverba/testphp74xc php -m | grep xdebug
 		@docker run --rm sineverba/testphp74xc php -m | grep pdo_pgsql
 		@docker run --rm sineverba/testphp74xc /usr/bin/composer -V | grep "1.10.17"

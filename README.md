@@ -37,6 +37,22 @@ A: Cause I'm following PHP releases version.
 | 7.4.11 | 7.4.11 | 1.10.13 |
 | 1.5.0 | 7.4.9 | 1.10.10 |
 
+## OpCache and settings
+
+During development, you can enable/disable `opcache_validate_timestamps` with
+
+```yaml
+# docker-compose.yml
+services:
+  app:
+    environment:
+      PHP_OPCACHE_VALIDATE_TIMESTAMPS: 1
+```
+
+## Update local image
+
+`$ docker pull sineverba/php74xc`
+
 
 ## PHP modules
 
