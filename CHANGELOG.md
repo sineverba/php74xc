@@ -1,4 +1,10 @@
-# 7.4.11
+# 7.4.12
++ Bump to PHP 7.4.12
++ Bump to Composer 1.10.17
++ Add login to Docker HUB
+
+
+## 7.4.11
 
 + Bump to Php 7.4.11
 + Bump composer to 1.10.13
