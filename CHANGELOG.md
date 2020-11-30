@@ -1,6 +1,7 @@
 # Next version
 + Bump to PHP 7.4.12
 + Bump to Composer 1.10.17
++ Add login to Docker HUB
 
 
 ## 7.4.11
