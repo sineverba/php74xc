@@ -33,10 +33,25 @@ A: Cause I'm following PHP releases version.
 | Github / Docker Image tag | PHP Version | Composer version |
 | ------------------ | ----------- | ---------------- |
 | latest | 7.4.13 | 1.10.17 |
+| 7.4.13-1 | 7.4.13 | 1.10.17 |
 | 7.4.13 | 7.4.13 | 1.10.17 |
 | 7.4.12 | 7.4.12 | 1.10.17 |
 | 7.4.11 | 7.4.11 | 1.10.13 |
 | 1.5.0 | 7.4.9 | 1.10.10 |
+
+## Xdebug and settings
+
+During development, you can enable/disable xdebug.mode` with
+
+```yaml
+# docker-compose.yml
+services:
+  app:
+    environment:
+      XDEBUG_MODE: "off"
+```
+
+For values, see [https://xdebug.org/docs/all_settings#mode](https://xdebug.org/docs/all_settings#mode)
 
 ## OpCache and settings
 
@@ -50,12 +65,12 @@ services:
       PHP_OPCACHE_VALIDATE_TIMESTAMPS: 1
 ```
 
-## Update local image
+### Update local image
 
-`$ docker pull sineverba/php74xc`
+`$ docker pull sineverba/php74xc:latest`
 
 
-## PHP modules
+### PHP modules
 
 `$ docker run --rm sineverba/php74xc php -m`
 
@@ -106,7 +121,7 @@ services:
 | zlib |
 | Xdebug |
 
-## Add image as alias
+### Add image as alias
 
 ``` bash
 $ cd ~
@@ -115,11 +130,11 @@ $ alias php74='docker run -it -w /data -v ${PWD}:/data --entrypoint php --rm sin
 $ alias composer74='docker run -it -w /data -v ${PWD}:/data --entrypoint "/usr/bin/composer" --rm sineverba/php74xc:latest'
 ```
 
-## Issues with memory limit (on composer)
+### Issues with memory limit (on composer)
 
 `$ php -d memory_limit=-1 /usr/bin/composer require [...]`
 
-### Build and test image locally
+#### Build and test image locally
 
 ```shell
 $ make build
