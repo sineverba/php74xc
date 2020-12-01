@@ -2,6 +2,7 @@ FROM php:7.4.13-cli
 
 # OpCache settings
 ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
+ENV XDEBUG_MODE="debug,coverage"
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -32,6 +33,7 @@ COPY --from=composer:1.10.17 /usr/bin/composer /usr/bin/composer
 COPY config/10-shorttag.ini $PHP_INI_DIR/conf.d/
 COPY config/20-memory-limit.ini $PHP_INI_DIR/conf.d/
 COPY config/30-opcache.ini $PHP_INI_DIR/conf.d/
+COPY config/40-xdebug.ini $PHP_INI_DIR/conf.d/
 
 # Create folder
 RUN mkdir -p /data
