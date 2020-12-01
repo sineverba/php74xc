@@ -1,4 +1,8 @@
-# 7.4.12
+# 7.4.13
++ Add `OPcache`
++ Bump to PHP 7.4.13
+
+## 7.4.12
 + Bump to PHP 7.4.12
 + Bump to Composer 1.10.17
 + Add login to Docker HUB
