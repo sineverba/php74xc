@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
-docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep 7.4.12
+docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep 7.4.13
+docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep OPcache
 docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep xdebug
 docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep pdo_pgsql
 docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep "1.10.17"
