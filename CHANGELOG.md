@@ -1,5 +1,6 @@
 # Next version
 + Add `OPcache`
++ Bump to PHP 7.4.13
 
 ## 7.4.12
 + Bump to PHP 7.4.12

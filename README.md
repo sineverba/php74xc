@@ -27,12 +27,13 @@ Do you use it? **Star it!**
 
 ## Github / image tags vs PHP version
 
-Q: Why release bumped from 1.x to 7.x?
+Q: Why release / version number bumped from 1.x to 7.x?
 A: Cause I'm following PHP releases version.
 
-| Github / Image tag | PHP Version | Composer version |
+| Github / Docker Image tag | PHP Version | Composer version |
 | ------------------ | ----------- | ---------------- |
-| latest | 7.4.12 | 1.10.17 |
+| latest | 7.4.13 | 1.10.17 |
+| 7.4.13 | 7.4.13 | 1.10.17 |
 | 7.4.12 | 7.4.12 | 1.10.17 |
 | 7.4.11 | 7.4.11 | 1.10.13 |
 | 1.5.0 | 7.4.9 | 1.10.10 |
