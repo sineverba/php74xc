@@ -1,4 +1,7 @@
-# 7.4.13-1
+# Next version
++ Add zip extension
+
+## 7.4.13-1
 + Fix missing enabled XDebug
 
 ## 7.4.13
