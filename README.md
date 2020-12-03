@@ -120,6 +120,7 @@ services:
 | xmlreader |
 | zlib |
 | Xdebug |
+| zip |
 
 ### Add image as alias
 
