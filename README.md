@@ -33,6 +33,7 @@ A: Cause I'm following PHP releases version.
 | Github / Docker Image tag | PHP Version | Composer version |
 | ------------------ | ----------- | ---------------- |
 | latest | 7.4.13 | 1.10.17 |
+| 7.4.13-2 | 7.4.13 | 1.10.17 |
 | 7.4.13-1 | 7.4.13 | 1.10.17 |
 | 7.4.13 | 7.4.13 | 1.10.17 |
 | 7.4.12 | 7.4.12 | 1.10.17 |
@@ -120,6 +121,7 @@ services:
 | xmlreader |
 | zlib |
 | Xdebug |
+| zip |
 
 ### Add image as alias
 
