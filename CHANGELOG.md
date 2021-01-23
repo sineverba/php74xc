@@ -1,4 +1,4 @@
-# Next version
+# 7.4.14
 + Bump to PHP 7.4.14
 + Bump Composer to 1.10.19
 
