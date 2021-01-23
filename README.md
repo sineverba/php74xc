@@ -21,8 +21,8 @@ Do you use it? **Star it!**
 
 | Component | Version |
 | --------- | ------- |
-| PHP | 7.4.12 |
-| Composer | 1.10.17 |
+| PHP | 7.4.14 |
+| Composer | 1.10.19 |
 
 
 ## Github / image tags vs PHP version
