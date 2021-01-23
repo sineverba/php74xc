@@ -21,8 +21,8 @@ Do you use it? **Star it!**
 
 | Component | Version |
 | --------- | ------- |
-| PHP | 7.4.12 |
-| Composer | 1.10.17 |
+| PHP | 7.4.14 |
+| Composer | 1.10.19 |
 
 
 ## Github / image tags vs PHP version
@@ -32,7 +32,8 @@ A: Cause I'm following PHP releases version.
 
 | Github / Docker Image tag | PHP Version | Composer version |
 | ------------------ | ----------- | ---------------- |
-| latest | 7.4.13 | 1.10.17 |
+| latest | 7.4.14 | 1.10.19 |
+| 7.4.14 | 7.4.14 | 1.10.19 |
 | 7.4.13-2 | 7.4.13 | 1.10.17 |
 | 7.4.13-1 | 7.4.13 | 1.10.17 |
 | 7.4.13 | 7.4.13 | 1.10.17 |

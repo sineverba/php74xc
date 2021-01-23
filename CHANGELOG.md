@@ -1,4 +1,8 @@
-# 7.4.13-2
+# 7.4.14
++ Bump to PHP 7.4.14
++ Bump Composer to 1.10.19
+
+## 7.4.13-2
 + Add zip extension
 
 ## 7.4.13-1
