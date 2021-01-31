@@ -7,7 +7,7 @@ php74xc: Docker image for PHP7.4.x + Xdebug + Composer
 
 
 
-Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer.
+Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer, for `amd64` and `armv7` architectures.
 
 Short tags are __OFF__.
 
@@ -16,30 +16,31 @@ Image ready to use as alias for development.
 Do you use it? **Star it!**
 
 
-
 ## Versions
 
 | Component | Version |
 | --------- | ------- |
 | PHP | 7.4.14 |
-| Composer | 1.10.19 |
+| Composer | 1.10.20 |
 
 
 ## Github / image tags vs PHP version
 
 Q: Why release / version number bumped from 1.x to 7.x?
-A: Cause I'm following PHP releases version.
 
-| Github / Docker Image tag | PHP Version | Composer version |
-| ------------------ | ----------- | ---------------- |
-| latest | 7.4.14 | 1.10.19 |
-| 7.4.14 | 7.4.14 | 1.10.19 |
-| 7.4.13-2 | 7.4.13 | 1.10.17 |
-| 7.4.13-1 | 7.4.13 | 1.10.17 |
-| 7.4.13 | 7.4.13 | 1.10.17 |
-| 7.4.12 | 7.4.12 | 1.10.17 |
-| 7.4.11 | 7.4.11 | 1.10.13 |
-| 1.5.0 | 7.4.9 | 1.10.10 |
+A: Because I'm following PHP releases version.
+
+| Github / Docker Image tag | PHP Version | Composer version | Multiple Architectures ? |
+| ------------------ | ----------- | ---------------- | ----------------------- |
+| latest | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
+| 7.4.14-1 | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
+| 7.4.14 | 7.4.14 | 1.10.19 | N |
+| 7.4.13-2 | 7.4.13 | 1.10.17 | N |
+| 7.4.13-1 | 7.4.13 | 1.10.17 | N |
+| 7.4.13 | 7.4.13 | 1.10.17 | N |
+| 7.4.12 | 7.4.12 | 1.10.17 | N |
+| 7.4.11 | 7.4.11 | 1.10.13 | N |
+| 1.5.0 | 7.4.9 | 1.10.10 | N |
 
 ## Xdebug and settings
 
