@@ -11,12 +11,16 @@ env:
 
 before_install:
   - docker -v | grep "19.03"
+  - mkdir -vp ~/.docker/cli-plugins/
+  - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.5.1/buildx-v0.5.1.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
+  - chmod a+x ~/.docker/cli-plugins/docker-buildx
   - chmod +x ./deploy/scripts/test.sh
-  - chmod +x ./deploy/scripts/deploy.sh
+  - docker buildx version
 
 install:
   - echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build --tag $DOCKER_USERNAME/$DOCKER_IMAGE .
+  - docker buildx build --platform linux/amd64,linux/arm --tag $DOCKER_USERNAME/testphp74xc:test --push .
 
 script:
   - ./deploy/scripts/test.sh
@@ -24,5 +28,7 @@ script:
 after_success:
   - |
     if [[ $TRAVIS_TAG != "" ]]; then
-      ./deploy/scripts/deploy.sh
+      echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin;
+      docker buildx create --use;
+      docker buildx build --platform linux/amd64,linux/arm --tag $DOCKER_USERNAME/$DOCKER_IMAGE:$TRAVIS_TAG $DOCKER_USERNAME/$DOCKER_IMAGE:latest --push .;
     fi

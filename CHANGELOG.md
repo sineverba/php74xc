@@ -1,5 +1,6 @@
 # Next version
 + Move `Travis` to `Focal` (20.04)
++ Compile for armv7
 
 ## 7.4.14
 + Bump to PHP 7.4.14

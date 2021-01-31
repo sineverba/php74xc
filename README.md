@@ -7,14 +7,13 @@ php74xc: Docker image for PHP7.4.x + Xdebug + Composer
 
 
 
-Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer.
+Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer, for `amd64` and `armv7` architectures.
 
 Short tags are __OFF__.
 
 Image ready to use as alias for development.
 
 Do you use it? **Star it!**
-
 
 
 ## Versions
