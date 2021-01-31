@@ -1,4 +1,7 @@
-# 7.4.14
+# Next version
++ Move `Travis` to `Focal` (20.04)
+
+## 7.4.14
 + Bump to PHP 7.4.14
 + Bump Composer to 1.10.19
 
