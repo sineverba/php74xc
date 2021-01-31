@@ -33,7 +33,7 @@ A: Because I'm following PHP releases version.
 | Github / Docker Image tag | PHP Version | Composer version | Multiple Architectures ? |
 | ------------------ | ----------- | ---------------- | ----------------------- |
 | latest | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
-| 7.4.14-1 | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
+| 7.4.14-2 | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
 | 7.4.14 | 7.4.14 | 1.10.19 | N |
 | 7.4.13-2 | 7.4.13 | 1.10.17 | N |
 | 7.4.13-1 | 7.4.13 | 1.10.17 | N |
