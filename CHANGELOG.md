@@ -1,4 +1,4 @@
-# Next version
+# 7.4.14-1
 + Move `Travis` to `Focal` (20.04)
 + Compile for armv7
 + Fix `error: multiple platforms feature is currently not supported for docker driver. Please switch to a different driver (eg. "docker buildx create --use")`
