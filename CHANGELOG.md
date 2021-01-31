@@ -5,6 +5,7 @@
 + Fix missing multiarch configuration
 + Clean steps
 + Add build multiarch only on tag
++ Bump composer to 1.10.20
 
 ## 7.4.14
 + Bump to PHP 7.4.14
