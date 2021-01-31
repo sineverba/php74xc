@@ -11,18 +11,29 @@ env:
 
 before_install:
   - docker -v | grep "19.03"
-  - chmod +x ./deploy/scripts/test.sh
-  - chmod +x ./deploy/scripts/deploy.sh
+  - mkdir -vp ~/.docker/cli-plugins/
+  - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.5.1/buildx-v0.5.1.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
+  - chmod a+x ~/.docker/cli-plugins/docker-buildx
+  - docker buildx version
 
 install:
   - echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build --tag $DOCKER_USERNAME/$DOCKER_IMAGE .
 
 script:
-  - ./deploy/scripts/test.sh
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep 7.4.14
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep OPcache
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep xdebug
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep pdo_pgsql
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep "1.10.19"
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -i | grep "short_open_tag => Off => Off"
+  - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -i | grep "memory_limit => 512M => 512M"
 
 after_success:
   - |
     if [[ $TRAVIS_TAG != "" ]]; then
-      ./deploy/scripts/deploy.sh
+      echo "$DOCKER_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin;
+      docker run --rm --privileged multiarch/qemu-user-static --reset -p yes;
+      docker buildx create --name mybuilder && docker buildx use mybuilder && docker buildx inspect --bootstrap;
+      docker buildx build --platform linux/amd64,linux/arm --tag $DOCKER_USERNAME/$DOCKER_IMAGE:$TRAVIS_TAG $DOCKER_USERNAME/$DOCKER_IMAGE:latest --push .;
     fi

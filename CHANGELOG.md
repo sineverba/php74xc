@@ -1,5 +1,10 @@
 # Next version
 + Move `Travis` to `Focal` (20.04)
++ Compile for armv7
++ Fix `error: multiple platforms feature is currently not supported for docker driver. Please switch to a different driver (eg. "docker buildx create --use")`
++ Fix missing multiarch configuration
++ Clean steps
++ Add build multiarch only on tag
 
 ## 7.4.14
 + Bump to PHP 7.4.14
