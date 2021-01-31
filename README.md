@@ -29,16 +29,17 @@ Do you use it? **Star it!**
 Q: Why release / version number bumped from 1.x to 7.x?
 A: Cause I'm following PHP releases version.
 
-| Github / Docker Image tag | PHP Version | Composer version |
-| ------------------ | ----------- | ---------------- |
-| latest | 7.4.14 | 1.10.19 |
-| 7.4.14 | 7.4.14 | 1.10.19 |
-| 7.4.13-2 | 7.4.13 | 1.10.17 |
-| 7.4.13-1 | 7.4.13 | 1.10.17 |
-| 7.4.13 | 7.4.13 | 1.10.17 |
-| 7.4.12 | 7.4.12 | 1.10.17 |
-| 7.4.11 | 7.4.11 | 1.10.13 |
-| 1.5.0 | 7.4.9 | 1.10.10 |
+| Github / Docker Image tag | PHP Version | Composer version | Multiple Architectures ? |
+| ------------------ | ----------- | ---------------- | ----------------------- |
+| multiarch | 7.4.14 | 1.10.19 | AMD64 - ARMv7 |
+| latest | 7.4.14 | 1.10.19 | N |
+| 7.4.14 | 7.4.14 | 1.10.19 | N |
+| 7.4.13-2 | 7.4.13 | 1.10.17 | N |
+| 7.4.13-1 | 7.4.13 | 1.10.17 | N |
+| 7.4.13 | 7.4.13 | 1.10.17 | N |
+| 7.4.12 | 7.4.12 | 1.10.17 | N |
+| 7.4.11 | 7.4.11 | 1.10.13 | N |
+| 1.5.0 | 7.4.9 | 1.10.10 | N |
 
 ## Xdebug and settings
 
