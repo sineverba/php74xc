@@ -5,6 +5,7 @@
 + Revert double ARM compile
 + Add `Semaphore` CI (not for tag)
 + Merge Semaphore jobs
++ Enable auto promote for Semaphore
 
 ## 7.4.14.2
 + Fix docker buildx
