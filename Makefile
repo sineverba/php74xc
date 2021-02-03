@@ -2,7 +2,7 @@ build:
 		docker build --tag sineverba/testphp74xc .
 
 multiple:
-		docker buildx build --tag sineverba/testphp74xc --platform linux/amd64,linux/arm/v6,linux/arm/v7 --push .
+		docker buildx build --tag sineverba/testphp74xc --platform linux/amd64,linux/arm --push .
 
 test:
 		@docker run --rm sineverba/testphp74xc php -v | grep 7.4.14
