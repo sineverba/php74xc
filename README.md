@@ -7,7 +7,7 @@ php74xc: Docker image for PHP7.4.x + Xdebug + Composer
 | CD / CI   |           |
 | --------- | --------- |
 | Travis CI | [![Build Status](https://travis-ci.com/sineverba/php74xc.svg?branch=master)](https://travis-ci.com/sineverba/php74xc) |
-| Semaphore CI | [![Build Status](https://sineverba.semaphoreci.com/badges/php74xc.svg)](https://sineverba.semaphoreci.com/sineverba/php74xc.svg) |
+| Semaphore CI | [![Build Status](https://sineverba.semaphoreci.com/badges/php74xc/branches/master.svg)](https://sineverba.semaphoreci.com/projects/php74xc) |
 
 
 Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer, for `amd64` and `armv7` architectures.
