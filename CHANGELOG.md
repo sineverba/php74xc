@@ -1,4 +1,7 @@
-# 7.4.14-4
+# Next version
++ Remove Travis
+
+## 7.4.14-4
 + Add `armv6` and `armv7` explicitly
 + Set xdebug PECL version explicitly
 + Add pull instructions
