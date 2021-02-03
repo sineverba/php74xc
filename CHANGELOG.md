@@ -1,4 +1,4 @@
-# 7.4.14-3
+# 7.4.14-4
 + Add `armv6` and `armv7` explicitly
 + Set xdebug PECL version explicitly
 + Add pull instructions
@@ -6,6 +6,7 @@
 + Add `Semaphore` CI (not for tag)
 + Merge Semaphore jobs
 + Enable auto promote for Semaphore
++ Fix buildx
 
 ## 7.4.14.2
 + Fix docker buildx
