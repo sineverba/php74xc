@@ -1,6 +1,9 @@
 php74xc: Docker image for PHP7.4.x + Xdebug + Composer
 ======================================================
 
+`docker pull sineverba/php74xc:latest`
+
+
 | CD / CI   |           |
 | --------- | --------- |
 | Travis CI | [![Build Status](https://travis-ci.com/sineverba/php74xc.svg?branch=master)](https://travis-ci.com/sineverba/php74xc) |
