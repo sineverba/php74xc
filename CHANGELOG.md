@@ -1,4 +1,4 @@
-# Next version
+# 7.4.14-3
 + Add `armv6` and `armv7` explicitly
 + Set xdebug PECL version explicitly
 + Add pull instructions
