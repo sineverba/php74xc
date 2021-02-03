@@ -3,6 +3,7 @@
 + Set xdebug PECL version explicitly
 + Add pull instructions
 + Revert double ARM compile
++ Add `Semaphore` CI (not for tag)
 
 ## 7.4.14.2
 + Fix docker buildx
