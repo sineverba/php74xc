@@ -1,4 +1,4 @@
-# Next version
+# 7.4.14-5
 + Remove Travis
 + Add `armv6` and `armv7` explicitly
 
