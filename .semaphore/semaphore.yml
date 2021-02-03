@@ -36,12 +36,11 @@ blocks:
             - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep "1.10.20"
             - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -i | grep "short_open_tag => Off => Off"
             - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -i | grep "memory_limit => 512M => 512M"
-            #- docker -v
-            #- mkdir -vp ~/.docker/cli-plugins/
-            #- curl --silent -L "https://github.com/docker/buildx/releases/download/v0.5.1/buildx-v0.5.1.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
-            #- chmod a+x ~/.docker/cli-plugins/docker-buildx
-            #- docker buildx version
-            #- docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-            #- docker buildx create --name mybuilder && docker buildx use mybuilder && docker buildx inspect --bootstrap
       secrets:
         - name: DOCKER_TOKEN
+
+promotions:
+  - name: Deploy
+    pipeline_file: deploy.yml
+    auto_promote:
+      when: "result = 'passed' and tag =~ '.*'"
