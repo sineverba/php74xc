@@ -1,5 +1,6 @@
 # Next version
 + Add `armv6` and `armv7` explicitly
++ Set xdebug PECL version explicitly
 
 ## 7.4.14.2
 + Fix docker buildx
