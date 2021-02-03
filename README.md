@@ -10,7 +10,7 @@ php74xc: Docker image for PHP7.4.x + Xdebug + Composer
 | Semaphore CI | [![Build Status](https://sineverba.semaphoreci.com/badges/php74xc/branches/master.svg)](https://sineverba.semaphoreci.com/projects/php74xc) |
 
 
-Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer, for `amd64` and `armv7` architectures.
+Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer, for `amd64`, `armv6` and `armv7` architectures.
 
 Short tags are __OFF__.
 
@@ -35,7 +35,8 @@ A: Because I'm following PHP releases version.
 
 | Github / Docker Image tag | PHP Version | Composer version | Multiple Architectures ? |
 | ------------------ | ----------- | ---------------- | ----------------------- |
-| latest | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
+| latest | 7.4.14 | 1.10.20 | AMD64 - ARMV6 - ARMv7 |
+| NEXT | 7.4.14 | 1.10.20 | AMD64 - ARMV6 - ARMv7 |
 | 7.4.14-4 | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
 | 7.4.14-2 | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
 | 7.4.14 | 7.4.14 | 1.10.19 | N |
