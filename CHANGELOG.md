@@ -1,4 +1,7 @@
-# 7.4.14.2
+# Next version
++ Add `armv6` and `armv7` explicitly
+
+## 7.4.14.2
 + Fix docker buildx
 
 ## 7.4.14-1 (deleted)
