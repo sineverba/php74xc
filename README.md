@@ -9,7 +9,7 @@ php74xc: Docker image for PHP7.4.x + Xdebug + Composer
 | Semaphore CI | [![Build Status](https://sineverba.semaphoreci.com/badges/php74xc/branches/master.svg)](https://sineverba.semaphoreci.com/projects/php74xc) |
 
 
-Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer, for linux/386, linux/amd64, linux/arm/v6, linux/arm/v7 architectures.
+Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer, multiarchitectures.
 
 Short tags are __OFF__.
 
@@ -22,8 +22,18 @@ Do you use it? **Star it!**
 
 | Component | Version |
 | --------- | ------- |
-| PHP | 7.4.14 |
+| PHP | 7.4.15 |
 | Composer | 1.10.20 |
+| XDebug | 3.0.2 |
+
+## Architectures
+
+```
+linux/386
+linux/amd64
+linux/arm/v6
+linux/arm/v7
+```
 
 
 ## Github / image tags vs PHP version
@@ -34,7 +44,8 @@ A: Because I'm following PHP releases version.
 
 | Github / Docker Image tag | PHP Version | Composer version | Multiple Architectures ? |
 | ------------------ | ----------- | ---------------- | ----------------------- |
-| latest | 7.4.14 | 1.10.20 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7 |
+| latest | 7.4.15 | 1.10.20 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7 |
+| 7.4.15 | 7.4.15 | 1.10.20 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7 |
 | 7.4.14-5 | 7.4.14 | 1.10.20 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7 |
 | 7.4.14-4 | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
 | 7.4.14-2 | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
