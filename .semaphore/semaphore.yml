@@ -28,10 +28,10 @@ blocks:
           commands:
             - checkout
             - docker build --tag $DOCKER_USERNAME/$DOCKER_IMAGE .
-            - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep 7.4.15
+            - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep 7.4.16
             - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -v | grep OPcache
             - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep xdebug
-            - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -r "xdebug_info();" | grep "3.0.2"
+            - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -r "xdebug_info();" | grep "3.0.3"
             - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -m | grep pdo_pgsql
             - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE /usr/bin/composer -V | grep "1.10.20"
             - docker run --rm $DOCKER_USERNAME/$DOCKER_IMAGE php -i | grep "short_open_tag => Off => Off"
