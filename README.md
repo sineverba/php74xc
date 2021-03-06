@@ -17,45 +17,13 @@ Image ready to use as alias for development.
 
 Do you use it? **Star it!**
 
+## Github / image tags and versions
 
-## Versions
+| Github / Docker Image tag | PHP Version | Composer version | XDebug | Architectures |
+| ------------------------- | ----------- | ---------------- | ------ | ------------- |
+| latest | 7.4.16 | 2.0.11 | 3.0.3 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.0.0 | 7.4.16 | 2.0.11 | 3.0.3 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
 
-| Component | Version |
-| --------- | ------- |
-| PHP | 7.4.15 |
-| Composer | 1.10.20 |
-| XDebug | 3.0.2 |
-
-## Architectures
-
-```
-linux/386
-linux/amd64
-linux/arm/v6
-linux/arm/v7
-```
-
-
-## Github / image tags vs PHP version
-
-Q: Why release / version number bumped from 1.x to 7.x?
-
-A: Because I'm following PHP releases version.
-
-| Github / Docker Image tag | PHP Version | Composer version | Multiple Architectures ? |
-| ------------------ | ----------- | ---------------- | ----------------------- |
-| latest | 7.4.15 | 1.10.20 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7 |
-| 7.4.15 | 7.4.15 | 1.10.20 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7 |
-| 7.4.14-5 | 7.4.14 | 1.10.20 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7 |
-| 7.4.14-4 | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
-| 7.4.14-2 | 7.4.14 | 1.10.20 | AMD64 - ARMv7 |
-| 7.4.14 | 7.4.14 | 1.10.19 | N |
-| 7.4.13-2 | 7.4.13 | 1.10.17 | N |
-| 7.4.13-1 | 7.4.13 | 1.10.17 | N |
-| 7.4.13 | 7.4.13 | 1.10.17 | N |
-| 7.4.12 | 7.4.12 | 1.10.17 | N |
-| 7.4.11 | 7.4.11 | 1.10.13 | N |
-| 1.5.0 | 7.4.9 | 1.10.10 | N |
 
 ## Xdebug and settings
 
