@@ -1,4 +1,7 @@
-# 1.0.1
+# 1.1.0
++ Bump composer to 1.10.21
+
+## 1.0.1
 + Fix documentation
 
 ## 1.0.0
