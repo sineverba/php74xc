@@ -1,4 +1,4 @@
-# Next version
+# 1.2.0
 + Upgrade `composer` and `Xdebug`
 
 ## 1.1.0
