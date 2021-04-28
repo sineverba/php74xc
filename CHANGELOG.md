@@ -1,4 +1,7 @@
-# 1.1.0
+# Next version
++ Upgrade `composer` and `Xdebug`
+
+## 1.1.0
 + Bump composer to 1.10.21
 
 ## 1.0.1
