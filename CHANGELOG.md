@@ -1,4 +1,7 @@
-# 1.3.0
+# Next version
++ Upgrade PHP to 7.4.20
+
+## 1.3.0
 + Upgrade dependencies
 
 ## 1.2.0
