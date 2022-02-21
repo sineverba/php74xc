@@ -1,4 +1,8 @@
-# 1.5.0
+# 1.6.0
++ Refactor Semaphore
++ Upgrade dependencies
+
+## 1.5.0
 + Upgrade PHP to 7.4.22
 
 ## 1.4.0
