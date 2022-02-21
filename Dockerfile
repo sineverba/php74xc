@@ -1,11 +1,11 @@
-FROM php:7.4.22-cli
+FROM php:7.4.28-cli
 
 # OpCache settings
 ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
 ENV XDEBUG_MODE="debug,coverage"
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update -y && apt-get install -y \
     git \
     curl \
     libpng-dev \
@@ -20,14 +20,14 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Setup PHPXDebug
-RUN pecl install xdebug-3.0.4
+RUN pecl install xdebug-3.1.3
 
 # Install PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd opcache zip \
     && docker-php-ext-enable mysqli pdo pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd xdebug
 
 # Get latest Composer
-COPY --from=composer:1.10.22 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.10.25 /usr/bin/composer /usr/bin/composer
 
 # Add custom ini files
 COPY config/10-shorttag.ini \
