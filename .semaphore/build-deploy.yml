@@ -4,11 +4,13 @@ name: Build and deploy Pipeline
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu1804
+    os_image: ubuntu2004
 execution_time_limit:
   hours: 3
 
 global_job_config:
+  secrets:
+    - name: ACCESS_TOKENS
 
   prologue:
     commands:
@@ -35,5 +37,3 @@ blocks:
             - docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
             - docker buildx create --name mybuilder && docker buildx use mybuilder && docker buildx inspect --bootstrap
             - docker buildx build --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7 --tag $DOCKER_USERNAME/$DOCKER_IMAGE:$SEMAPHORE_GIT_TAG_NAME --tag $DOCKER_USERNAME/$DOCKER_IMAGE:latest --push .
-      secrets:
-        - name: DOCKER_TOKEN
