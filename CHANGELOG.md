@@ -1,4 +1,4 @@
-# Next version
+# 1.6.0
 + Refactor Semaphore
 + Upgrade dependencies
 
