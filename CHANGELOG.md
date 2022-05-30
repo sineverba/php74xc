@@ -1,5 +1,5 @@
-# Next version
-+ Upgrade dependencies
+# 1.7.0
++ Upgrade dependencies + add mCrypt
 
 ## 1.6.0
 + Refactor Semaphore

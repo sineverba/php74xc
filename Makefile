@@ -1,6 +1,6 @@
 IMAGE_NAME=sineverba/testphp74xc
 CONTAINER_NAME=testphp74xc
-VERSION=1.6.0-dev
+VERSION=1.7.0-dev
 
 build:
 		docker build --tag $(IMAGE_NAME):$(VERSION) .
