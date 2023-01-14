@@ -1,4 +1,4 @@
-FROM php:7.4.29-cli
+FROM php:7.4.33-cli
 
 # OpCache settings
 ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
@@ -21,7 +21,7 @@ RUN apt-get update -y && apt-get install -y \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Setup PHPXDebug
-RUN pecl install xdebug-3.1.4 mcrypt-1.0.5
+RUN pecl install xdebug-3.1.5 mcrypt-1.0.5
 
 # Install PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd opcache zip \
