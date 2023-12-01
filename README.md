@@ -21,7 +21,7 @@ Do you use it? **Star it!**
 
 | Github / Docker Image tag | PHP Version | Composer version | XDebug | Architectures |
 | ------------------------- | ----------- | ---------------- | ------ | ------------- |
-| latest | 7.4.33 | 1.10.26 | 3.1.5 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| latest | 7.4.33 | 1.10.27 | 3.1.5 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
 | 1.9.0 | 7.4.33 | 1.10.26 | 3.1.5 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
 | 1.8.0 | 7.4.33 | 1.10.26 | 3.1.5 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
 | 1.7.0 | 7.4.29 | 1.10.26 | 3.1.4 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
