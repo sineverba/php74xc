@@ -1,7 +1,7 @@
 IMAGE_NAME=sineverba/php74xc
 CONTAINER_NAME=php74xc
 APP_VERSION=1.9.0-dev
-BUILDX_VERSION=0.11.1
+BUILDX_VERSION=0.12.0
 BINFMT_VERSION=qemu-v7.0.0-28
 
 build:
@@ -35,7 +35,7 @@ test:
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -m | grep pdo_pgsql
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -m | grep zip
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -m | grep mcrypt
-	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) /usr/bin/composer -V | grep "1.10.26"
+	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) /usr/bin/composer -V | grep "1.10.27"
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -i | grep "short_open_tag => Off => Off"
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -i | grep "memory_limit => 512M => 512M"
 
