@@ -1,11 +1,19 @@
 IMAGE_NAME=sineverba/php74xc
 CONTAINER_NAME=php74xc
-APP_VERSION=1.10.0-dev
-BUILDX_VERSION=0.12.0
+APP_VERSION=1.11.0-dev
+COMPOSER_VERSION=1.10.27
+XDEBUG_VERSION=3.1.6
+MCRYPT_VERSION=1.0.7
+BUILDX_VERSION=0.13.1
 BINFMT_VERSION=qemu-v7.0.0-28
 
 build:
-	docker build --tag $(IMAGE_NAME):$(APP_VERSION) .
+	docker build \
+		--build-arg COMPOSER_VERSION=$(COMPOSER_VERSION) \
+		--build-arg XDEBUG_VERSION=$(XDEBUG_VERSION) \
+		--build-arg MCRYPT_VERSION=$(MCRYPT_VERSION) \
+		--tag $(IMAGE_NAME):$(APP_VERSION) \
+		"."
 
 preparemulti:
 	mkdir -vp ~/.docker/cli-plugins
@@ -24,14 +32,17 @@ preparemulti:
 multi:
 	docker buildx inspect --bootstrap --builder multiarch
 	docker buildx build \
-		--platform linux/arm64/v8,linux/amd64,linux/arm/v6,linux/arm/v7 \
+		--platform linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8 \
+		--build-arg COMPOSER_VERSION=$(COMPOSER_VERSION) \
+		--build-arg XDEBUG_VERSION=$(XDEBUG_VERSION) \
+		--build-arg MCRYPT_VERSION=$(MCRYPT_VERSION) \
 		--tag $(IMAGE_NAME):$(APP_VERSION) "."
 
 test:
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -v | grep 7.4.33
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -v | grep OPcache
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -m | grep xdebug
-	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -r "xdebug_info();" | grep "3.1.5"
+	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -r "xdebug_info();" | grep $(XDEBUG_VERSION)
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -m | grep pdo_pgsql
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -m | grep zip
 	@docker run --name $(CONTAINER_NAME) --rm $(IMAGE_NAME):$(APP_VERSION) php -m | grep mcrypt
