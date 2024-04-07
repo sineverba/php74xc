@@ -1,15 +1,14 @@
 php74xc: Docker image for PHP7.4.x + Xdebug + Composer
 ======================================================
 
-`docker pull sineverba/php74xc:1.10.0`
-
+> Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer, multiarchitectures.
 
 | CD / CI   |           |
 | --------- | --------- |
 | Semaphore CI | [![Build Status](https://sineverba.semaphoreci.com/badges/php74xc/branches/master.svg)](https://sineverba.semaphoreci.com/projects/php74xc) |
+| Circle CI | [![CircleCI](https://dl.circleci.com/status-badge/img/gh/sineverba/php74xc/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/sineverba/php74xc/tree/master) |
+| Docker Hub | `docker pull sineverba/php74xc:1.11.0` - [Link to image](https://hub.docker.com/r/sineverba/php74xc) |
 
-
-Docker image built from **PHP7.4.x** CLI official + **X**debug + **C**omposer, multiarchitectures.
 
 Short tags are __OFF__.
 
