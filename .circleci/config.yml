@@ -129,7 +129,7 @@ jobs:
             -e ORGANIZATION=$DOCKER_LOGIN \
             -e IMAGE=$DOCKER_IMAGE \
             -e TAG=cache-arm \
-            $DOCKER_LOGIN/$DOCKER_IMAGE:$DELETE_TAG_TAG
+            sineverba/delete-tag:$DELETE_TAG_TAG
 workflows:
   test_and_build_images:
     jobs:
