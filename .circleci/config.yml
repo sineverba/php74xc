@@ -134,11 +134,13 @@ workflows:
   test_and_build_images:
     jobs:
       - test:
+          context: SECRETS
           filters:
             branches:
-              only:
-                - master
-                - develop
+              #only:
+              #  - master
+              #  - develop
+              only: /.*/
       - build_arm64:
           context: SECRETS
           filters:

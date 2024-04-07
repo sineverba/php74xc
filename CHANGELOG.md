@@ -1,5 +1,6 @@
 # Next version
 + Upgrade dependencies
++ Fix Continuous integrations services
 
 ## 1.10.0
 + Upgrade dependencies
