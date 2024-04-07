@@ -134,6 +134,7 @@ workflows:
   test_and_build_images:
     jobs:
       - test:
+          context: SECRETS
           filters:
             branches:
               only:
