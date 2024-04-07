@@ -1,5 +1,6 @@
 # Next version
 + Upgraded badges
++ Fix Docker delete tag image name
 
 ## 1.11.0
 + Upgrade dependencies
