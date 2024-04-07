@@ -22,6 +22,7 @@ Do you use it? **Star it!**
 | Github / Docker Image tag | PHP Version | Composer version | XDebug | Architectures |
 | ------------------------- | ----------- | ---------------- | ------ | ------------- |
 | latest | 7.4.33 | 1.10.27 | 3.1.6 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.11.0 | 7.4.33 | 1.10.27 | 3.1.6 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
 | 1.10.0 | 7.4.33 | 1.10.27 | 3.1.5 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
 | 1.9.0 | 7.4.33 | 1.10.26 | 3.1.5 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
 | 1.8.0 | 7.4.33 | 1.10.26 | 3.1.5 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
@@ -124,34 +125,10 @@ services:
 ``` bash
 $ cd ~
 $ nano .bashrc
-$ alias php74='docker run -it -w /data -v ${PWD}:/data --entrypoint php --rm sineverba/php74xc:latest'
-$ alias composer74='docker run -it -w /data -v ${PWD}:/data --entrypoint "/usr/bin/composer" --rm sineverba/php74xc:latest'
+$ alias php74='docker run -it -w /data -v ${PWD}:/data --entrypoint php --rm sineverba/php74xc:1.11.0'
+$ alias composer74='docker run -it -w /data -v ${PWD}:/data --entrypoint "/usr/bin/composer" --rm sineverba/php74xc:1.11.0'
 ```
 
 ### Issues with memory limit (on composer)
 
 `$ php -d memory_limit=-1 /usr/bin/composer require [...]`
-
-#### Build and test image locally
-
-```shell
-$ make build
-$ make test
-$ make destroy
-```
-
-+ Check images list
-
-`$ docker image ls`
-
-+ Clone the project
-
-`$ git clone git@github.com:sineverba/php74xc.git`
-
-+ Run from same folder
-
-`$ docker build --tag php74xc:x.y.z .`
-
-+ Check new image (php74xc:x.y.z)
-
-`$ docker image ls`
