@@ -21,19 +21,19 @@ Do you use it? **Star it!**
 
 | Github / Docker Image tag | PHP Version | Composer version | XDebug | Architectures |
 | ------------------------- | ----------- | ---------------- | ------ | ------------- |
-| latest | 7.4.33 | 1.10.27 | 3.1.5 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.10.0 | 7.4.33 | 1.10.27 | 3.1.5 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.9.0 | 7.4.33 | 1.10.26 | 3.1.5 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.8.0 | 7.4.33 | 1.10.26 | 3.1.5 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.7.0 | 7.4.29 | 1.10.26 | 3.1.4 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.6.0 | 7.4.28 | 1.10.25 | 3.1.3 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.5.0 | 7.4.22 | 1.10.22 | 3.0.4 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.4.0 | 7.4.20 | 1.10.22 | 3.0.4 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.3.0 | 7.4.19 | 1.10.22 | 3.0.4 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.2.0 | 7.4.16 | 1.10.22 | 3.0.4 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.1.0 | 7.4.16 | 1.10.21 | 3.0.3 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.0.1 | 7.4.16 | 1.10.20 | 3.0.3 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
-| 1.0.0 | 7.4.16 | 1.10.20 | 3.0.3 | linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| latest | 7.4.33 | 1.10.27 | 3.1.6 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.10.0 | 7.4.33 | 1.10.27 | 3.1.5 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.9.0 | 7.4.33 | 1.10.26 | 3.1.5 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.8.0 | 7.4.33 | 1.10.26 | 3.1.5 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.7.0 | 7.4.29 | 1.10.26 | 3.1.4 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.6.0 | 7.4.28 | 1.10.25 | 3.1.3 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.5.0 | 7.4.22 | 1.10.22 | 3.0.4 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.4.0 | 7.4.20 | 1.10.22 | 3.0.4 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.3.0 | 7.4.19 | 1.10.22 | 3.0.4 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.2.0 | 7.4.16 | 1.10.22 | 3.0.4 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.1.0 | 7.4.16 | 1.10.21 | 3.0.3 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.0.1 | 7.4.16 | 1.10.20 | 3.0.3 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
+| 1.0.0 | 7.4.16 | 1.10.20 | 3.0.3 | linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 |
 
 
 ## Xdebug and settings

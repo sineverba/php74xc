@@ -1,5 +1,8 @@
+ARG COMPOSER_VERSION
+FROM composer:$COMPOSER_VERSION AS composer_downloader
 FROM php:7.4.33-cli
-
+ARG XDEBUG_VERSION 
+ARG MCRYPT_VERSION 
 # OpCache settings
 ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
 ENV XDEBUG_MODE="debug,coverage"
@@ -21,14 +24,14 @@ RUN apt-get update -y && apt-get install -y \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Setup PHPXDebug
-RUN pecl install xdebug-3.1.5 mcrypt-1.0.5
+RUN pecl install xdebug-${XDEBUG_VERSION} mcrypt-${MCRYPT_VERSION}
 
 # Install PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd opcache zip \
     && docker-php-ext-enable mysqli pdo pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd xdebug mcrypt
 
 # Get latest Composer
-COPY --from=composer:1.10.27 /usr/bin/composer /usr/bin/composer
+COPY --from=composer_downloader /usr/bin/composer /usr/bin/composer
 
 # Add custom ini files
 COPY config/10-shorttag.ini \
