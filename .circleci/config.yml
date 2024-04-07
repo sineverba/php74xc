@@ -137,10 +137,9 @@ workflows:
           context: SECRETS
           filters:
             branches:
-              #only:
-              #  - master
-              #  - develop
-              only: /.*/
+              only:
+                - master
+                - develop
       - build_arm64:
           context: SECRETS
           filters:
