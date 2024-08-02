@@ -25,6 +25,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Setup PHPXDebug
 RUN pecl install xdebug-${XDEBUG_VERSION} mcrypt-${MCRYPT_VERSION}
+RUN pecl install redis && docker-php-ext-enable redis
 
 # Install PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd opcache zip \
