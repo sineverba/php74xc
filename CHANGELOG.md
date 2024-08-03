@@ -2,6 +2,9 @@
 + Upgraded badges
 + Fix Docker delete tag image name
 
+## 1.11.1
++ add redis plugin
+
 ## 1.11.0
 + Upgrade dependencies
 + Fix Continuous integrations services
